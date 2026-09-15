@@ -1,0 +1,40 @@
+/* styles.css — 简洁的莫兰迪风格 */
+:root{
+  --bg:#F4F2F0; /* 暖灰 */
+  --muted:#BDB6B0; /* 次要文字 */
+  --accent:#9C8B83; /* 主色调 */
+  --accent-2:#C1B8B0; /* 辅助色 */
+  --card:#EFECE9;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:"SimSun","宋体",serif;background:var(--bg);color:#333}
+a{color:var(--accent);text-decoration:none}
+header.hero{padding:32px 20px;background:linear-gradient(180deg,var(--card),var(--bg));}
+.nav{display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto}
+.logo{font-weight:700;font-size:20px}
+.lang-switch button{border:0;background:transparent;padding:6px 10px;cursor:pointer}
+.lang-switch button.active{background:var(--accent);color:white;border-radius:6px}
+.hero-inner{display:flex;gap:20px;align-items:center;max-width:1000px;margin:28px auto}
+.avatar{width:150px;height:150px;border-radius:12px;object-fit:cover;border:6px solid var(--card)}
+.hero-text h1{margin:0;font-size:28px}
+.hero-text p{margin:6px 0;color:var(--muted)}
+.contacts a{display:inline-block;margin-right:12px;color:var(--muted)}
+.actions{margin-top:12px}
+.actions button, .actions .cta{padding:8px 14px;border-radius:8px;background:var(--accent);color:#fff;border:0;cursor:pointer;margin-right:8px}
+main{max-width:1000px;margin:24px auto;padding:0 20px}
+.section{margin-bottom:24px}
+.section-title{font-size:18px;margin-bottom:12px;color:var(--accent-2)}
+.card{background:linear-gradient(180deg,#fff, var(--card));padding:14px;border-radius:8px;margin-bottom:12px}
+.timeline .item{padding:12px 0;border-bottom:1px dashed var(--card)}
+.muted{color:var(--muted);font-size:13px}
+.chips span{display:inline-block;background:var(--card);padding:6px 10px;border-radius:20px;margin:6px;margin-right:6px}
+.site-footer{text-align:center;padding:20px;color:var(--muted)}
+.photo{width:100%;max-width:320px;border-radius:8px;margin-top:12px}
+@media(min-width:900px){
+  .hero-inner{padding:20px}
+}
+/* 打印样式 */
+@media print{
+  body{background:#fff}
+  header, .actions, .lang-switch{display:none}
+}
